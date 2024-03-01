@@ -1,0 +1,14 @@
+#Boundaries configuration file for personale.bound
+#----------------------------------------------
+
+Density:
+	Ymin: KEPLERIAN2DDENS
+	Ymax: KEPLERIAN2DDENS
+
+Vx:
+	Ymin: KEPLERIAN2DVAZIM
+	Ymax: KEPLERIAN2DVAZIM
+
+Vy:
+	Ymin: OPENOUTER
+	Ymax: OPENOUTER
