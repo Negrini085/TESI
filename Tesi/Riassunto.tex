@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper]{report}
+\pdfminorversion=4
+\usepackage{caption, subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[top=3cm, bottom=3cm]{geometry}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{colortbl}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{float}
+
+\newcommand{\apj}{\textit{The Astrophysical Journal}}
+\newcommand{\mnras}{\textit{Monthly Notices of the Royal Astronomical Society}}
+\newcommand{\aap}{\textit{Astronomy \& Astrophysics}}
+\newcommand{\nar}{\textit{New Astronomy Reviews}}
+\newcommand{\araa}{\textit{Annual Review of Astronomy and Astrophysics}}
+
+\usepackage[backend=biber, style=authoryear, maxcitenames=2, maxbibnames=99]{biblatex}
+\renewcommand*{\finalnamedelim}{%
+\ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+  \addspace\&\space}
+\renewcommand*{\postnotedelim}{\addspace\mkbibparens}
+\addbibresource{bibliografia.bib}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\renewcommand*{\nameyeardelim}{\addspace}
+\renewcommand*{\postnotedelim}{\addcolon\space}
+\renewcommand*{\finentrypunct}{)}
+\renewcommand{\chaptername}{Capitolo}
+
+\begin{document}
+
+\begin{center}
+    {\large\textbf{Studio del troncamento di dischi circumstellari: analisi della dipendenza dai parametri della binaria}}
+\end{center}
+
+L'obiettivo di questo lavoro di tesi è valutare le dimensioni e le eccentricità dei dischi proto-planetari circumstellari in dipendenza dei parametri del sistema binario che li ospita.
+L'analisi da noi effettuata si concentra sul rapporto fra le masse della binaria $q$ (mass-ratio), sull'eccentricità della binaria $e$ e sulla viscosità del materiale.
+
+I dischi proto-planetari sono delle strutture sottili costituite da gas e polveri che orbitano attorno ad una stella: in essi si formano i pianeti.
+L'evoluzione del disco è dettata da meccanismi che determinano una ridistribuzione del momento angolare: il materiale che lo costituisce accresce lentamente sul corpo centrale.
+Se un sistema stellare è composto da due stelle gravitazionalmente legate i dischi proto-stellari presenti possono essere tre: due circumstellari ed uno circum-binario.
+Nell'ambito di questa tesi siamo interessati ai dischi circum-stellari, che abbiamo considerato essere posti sullo stesso piano orbitale della binaria.
+
+Determinare l'estensione spaziale di un disco d'accrescimento in un sistema multiplo è una problematica che richiede lo studio dell'interazione fra un corpo perturbante ed un anello di gas.
+Approcci semi-analitici come quello di \textcite{PapaloizouPringle1977}, focalizzato sull'analisi delle forze di marea causate dalla presenza del compagno, e quello di \textcite{GoldreichTremaine1980}, basato sulle risonanze fra le orbite del disco e della binaria, hanno consentito di determinare che la posizione in cui avviene il troncamento dipende da $e$ , da $q$, dal parametro adimensionale $\alpha$ che regola la viscosità del materiale e dalla temperatura $T$ del disco. 
+Un campionamento fine dello spazio dei parametri è stato realizzato da \textcite{Pichardo2005} effettuando 45 simulazioni al variare di $q$ ed $e$: il metodo delle \textit{test particles} da loro utilizzato focalizza l'attenzione della ricerca su effetti puramente dinamici e non consente di studiare i fenomeni di natura viscosa che regolano l'evoluzione del disco.
+Una trattazione più rigorosa del troncamento è quella di \textcite{ArtymowiczLubow1994}, che hanno preso in considerazione tutta la fisica del problema mediante simulazioni lagrangiane dell'evoluzione del disco: a causa dell'elevato costo computazionale i dischi circumstellari da loro studiati sono solamente otto.
+\textcite{ManaraTronc2019} hanno proposto una formula analitica per la determinazione del raggio di troncamento
+\begin{equation}
+r_T\,=\,R_{L} (a e^b\,+\,c\mu^d),
+\label{eq:tronc_disc}
+\end{equation}
+dove $R_L$ è la dimensione spaziale del Roche-Lobe \parencite{Eggleton1983}, $c\,=\,0.88$ e $d\,=\,0.01$ sono dei parametri determinati a partire dal lavoro di \textcite{PapaloizouPringle1977} ed $a$, $b$ sono stati calcolati fittando i risultati numerici ottenuti da \textcite{ArtymowiczLubow1994}.
+
+Nonostante il troncamento sia stato diffusamente trattato dal punto di vista computazionale, una vasta regione dello spazio dei parametri resta ad oggi inesplorata: questo lavoro di tesi si propone di colmare alcune delle lacune presenti. 
+Per fare ciò effettuiamo delle simulazioni numeriche 2D utilizzando FARGO3D \parencite{Fargo3D}, che è un codice a griglia euleriana sviluppato con l'obiettivo di studiare la fisica dei dischi d'accrescimento, ampiamente utilizzato in ambito astrofisico.
+I sistemi binari che abbiamo analizzato possono essere divisi in tre categorie: circolari ($e\,=\,0.0$), a media eccentricità ($e\,=\,0.3$) e ad elevata eccentricità ($e\,=\,0.6$).
+Per ogni valore di $e$, abbiamo studiato quattro rapporti fra la massa $m_2$ della stella secondaria e quella $m_1$ della primaria.
+Abbiamo deciso di lavorare con tre differenti viscosità del materiale orbitante esplorando l'intervallo caratteristico del problema in analisi, giungendo a valori del numero di Reynolds più elevati rispetto a \textcite{ArtymowiczLubow1994}.
+Il numero totale di simulazioni effettuate in questo lavoro di tesi è 72, nove delle quali sono delle run di convergenza per verificare la correttezza dell'approccio utilizzato: il campione da noi analizzato è 9 volte più grande di quello di \textcite{ArtymowiczLubow1994}.
+Le dimensioni del disco e la sua eccentricità vengono valutate per ogni configurazione assunta dal materiale fra il trentesimo e il cinquantesimo periodo di rivoluzione della binaria: i risultati che forniamo sono i valori medi delle stime effettuate.
+
+Abbiamo determinato l'estensione dei dischi con due metodi differenti: per ogni sistema in analisi effettuiamo una stima del raggio di troncamento e del semiasse maggiore del disco. 
+Abbiamo osservato che ad $e$ fissato la dimensione del disco dipende fortemente dal valore di $m_{cen}/m_{per}$, dove $m_{cen}$ è la massa della stella al centro della griglia, mentre $m_{per}$ la massa del corpo perturbante: gli oggetti che orbitano attorno ad una frazione di massa della binaria più elevata sono più grandi.
+All'aumentare di $e$ le dimensioni dei dischi circumstellari analizzati diminuiscono sensibilmente: questo andamento è dovuto al fatto che le risonanze eccentriche sono di intensità maggiore per un sistema ad alta $e$, con un conseguente spostamento della regione di troncamento \parencite{ArtymowiczLubow1994}.
+\'E possibile osservare una dipendenza da $\alpha$: maggiore è la viscosità, maggiori sono le dimensioni del disco che otteniamo.
+
+La seconda caratteristica a cui siamo interessati è $e_{disco}$, che abbiamo definito come l'eccentricità delle orbite percorse dal materiale nell'intorno del semiasse maggiore di troncamento.
+Abbiamo effettuato una stima per ognuno dei 63 dischi simulati, osservando che in media $e_{disco}$ diminuisce all'aumentare dell'eccentricità della binaria: questo comportamento contro-intuitivo sembra si verifichi perché le risonanze responsabili dell'eccitazione di $e_{disco}$ finiscono per trovarsi a raggi maggiori rispetto a quello di troncamento.
+\textcite{ArtymowiczLubow1994} fanno riferimento ad $e_{disco}$ solo per rimarcare come la mancanza di simmetria per rotazioni attorno all'asse $z$ del disco pregiudichi una corretta valutazione di $r_T$: l'approccio quantitativo presente in questa tesi è innovativo.
+
+Abbiamo effettuato un confronto fra le dimensioni dei dischi da noi ottenute e quelle presenti in letteratura osservando un buon accordo fra i valori di $r_T$ per i dischi ospitati in sistemi binari circolari o altamente eccentrici. 
+Nel caso di binaria ad $e\,=\,0.3$ abbiamo osservato delle discrepanze in media del $15\,\%$ fra i valori teorici e quelli da noi ottenuti: il modo di scalare delle dimensioni del disco è leggermente differente nei due casi.
+Considerato il buon accordo fra i nuovi risultati numerici e quelli ottenuti da lavori precedenti, uno dei possibili sviluppi futuri di questo lavoro di tesi è un estensione del fit di $a,\,b,\,c,\,d$ ad una nuova regione dello spazio dei parametri.
+
+\setlength{\bibitemsep}{\baselineskip}
+\printbibliography[heading = bibintoc, title=Bibliografia]
+
+\end{document}

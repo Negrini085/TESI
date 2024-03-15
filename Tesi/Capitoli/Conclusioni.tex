@@ -1,0 +1,48 @@
+\chapter{Conclusioni}
+
+Motivati dalla mancanza in letteratura di un campionamento sistematico dello spazio dei parametri, abbiamo deciso di studiare il troncamento per dischi circumstellari al variare dell'eccentricità $e$ della binaria ospitante, del mass-ratio $q$ e della viscosità del materiale orbitante.
+
+Per effettuare lo studio numerico necessario abbiamo utilizzato FARGO3D \parencite{Fargo3D}, un codice idrodinamico sviluppato per analizzare le caratteristiche dei dischi proto-planetari.
+Ci siamo concentrati su tre tipologie di sistemi binari (circolari, mediamente eccentrici ed altamente eccentrici) studiando quattro rapporti fra la massa $m_2$ della stella secondaria e quella $m_1$ della primaria: $m_2/m_1\,=\,0.1,\,0.33,\,0.5,\,1$.
+I materiali costituenti i dischi potevano differire nel nostro lavoro in viscosità, dato che abbiamo utilizzato $\alpha\,\in\,\{10^{-2},\, 10^{-3},\,10^{-4}\}$ in modo tale da esplorare l'intervallo caratteristico dei dischi d'accrescimento.
+
+Il numero totale di simulazioni che abbiamo effettuato è 72: il campione da noi analizzato è 9 volte più grande di quello presente nella ricerca di \textcite{ArtymowiczLubow1994}. Il bagaglio numerico a sostegno dello studio del troncamento risulta più vasto grazie a questo lavoro di tesi.
+
+Ci siamo concentrati in particolare su due caratteristiche dei dischi: la loro estensione spaziale e la loro eccentricità.
+
+\section{Dimensioni del disco}
+
+I metodi che abbiamo impiegato per valutare l'estensione dei dischi sono due:
+\begin{list}{\textbf{-}}{\setlength{\itemsep}{0cm}}
+    \item metodo del raggio di troncamento
+    \item metodo del semiasse maggiore
+\end{list}
+La motivazione alla base dell'utilizzo del secondo metodo è che, come riportato da \textcite{ArtymowiczLubow1994}, l'eccentricità intrinseca del disco pregiudica una corretta valutazione della coordinata radiale a cui avviene il troncamento.
+Abbiamo osservato che i valori di $a_T < r_T$ sistematicamente per ogni disco considerato nella nostra analisi: questo accade perché il materiale durante la propria orbita spende più tempo nell'intorno dell'apoastro.
+
+La dipendenza dell'estensione del disco dai parametri della binaria è analoga a quella presente in letteratura. 
+Abbiamo osservato che ad $e$ fissato, la dimensione dell'oggetto orbitante dipende fortemente da $m_{cen}/m_{per}$, dove $m_{cen}$ è la massa della stella centrale, mentre $m_{per}$ quella del corpo perturbante.
+I dischi che si sviluppano attorno ad una stella che racchiude una frazione maggiore della massa della binaria sono più grandi: questo accade perché il corrispondente \textit{Roche-Lobe} è più esteso. 
+Come individuato da \textcite{ArtymowiczLubow1994}, le dimensioni dei dischi ospitati in sistemi binari mediamente o altamente eccentrici sono inferiori rispetto a quelle determinate per dischi in binarie circolari: questo andamento è dovuto al fatto che le risonanze eccentriche sono
+di intensità maggiore ad alta $e$ con un conseguente spostamento
+della regione di troncamento \parencite{ArtymowiczLubow1994}. Abbiamo osservato una leggera dipendenza da $\alpha$: maggiore è la viscosità, maggiori sono le dimensioni che otteniamo.
+Tale dipendenza era nota in letteratura per dischi ospitati in sistemi binari eccentrici, ma non per quanto riguarda quelli circolari.\\
+
+Per testare i metodi utilizzati in questo lavoro di tesi, abbiamo effettuato un confronto con la relazione \eqref{eq:tronc_disc} proposta da \textcite{ManaraTronc2019}: tale paragone ci ha consentito di osservare come il criterio da noi sviluppato per il calcolo del raggio di troncamento e del semiasse maggiore del disco portasse a ottenere delle dimensioni maggiori rispetto a quelle osservate da \textcite{ArtymowiczLubow1994}. 
+Abbiamo notato che la formula \eqref{eq:tronc_disc} cattura correttamente l'andamento delle estensioni dei dischi al variare dei parametri della binaria: i valori suggeriti dal modello teorico presentano degli scarti tipici del $10/15\%$ con quanto da noi calcolato.
+\'E necessario sottolineare che i dischi circum-primari simulati presentano per bassi valori di $m_2/m_1$ dei raggi di troncamento che scalano al diminuire di $q$ con un tasso maggiore rispetto a quanto suggerito da \textcite{ManaraTronc2019}.
+
+\section{Eccentricità del disco}
+
+Per ogni disco presente in questo lavoro, abbiamo valutato quale fosse il valore di $e_{disco}$ osservando che in media tale quantità diminuisce all’aumentare dell’eccentricità della binaria.
+Supponiamo che questo comportamento contro-intuitivo si verifichi perché le risonanze responsabili dell’eccitazione di $e_{disco}$ finiscono per trovarsi a raggi maggiori rispetto a quello di troncamento. 
+\textcite{ArtymowiczLubow1994} fanno riferimento all'eccentricità del disco solo per rimarcare come la mancanza di simmetria per rotazioni
+attorno all’asse z del materiale orbitante pregiudichi una corretta valutazione di $r_T$ : al meglio delle nostre conoscenze è la prima volta che viene condotta una tale analisi quantitativa dell'eccentricità eccitata dalla compagna in questo contesto.
+
+\section{Sviluppi futuri}
+
+Ci siamo posti di studiare computazionalmente le caratteristiche dei dischi circumstellari motivati dalla mancanza di un campionamento sistematico dello spazio dei parametri: questo lavoro di tesi ha consentito di colmare solamente alcune lacune e quindi uno dei possibili sviluppi futuri potrebbe essere un'ulteriore espansione dell'analisi effettuata.
+Il confronto con la relazione analitica di \textcite{ManaraTronc2019} consente di paragonare il nostro lavoro con altri studi teorico-computazionali ed i metodi da noi utilizzati con quelli presenti in letteratura.
+Un test importante per i risultati da noi ottenuti potrebbe essere il confronto con studi osservativi di dischi circumstellari dei quali sono noti i parametri da noi presi in considerazione.
+Un ulteriore spunto per il futuro potrebbe essere l'estensione del fit di $a$, $b$, $c$ e $d$ ad una regione dello spazio dei parametri non presa in considerazione nel lavoro di \textcite{ManaraTronc2019}.
+

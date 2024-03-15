@@ -1,0 +1,47 @@
+è un tipico esempio di metodo alle differenze finite. Consideriamo le seguenti espansioni di Taylor:
+\begin{equation}
+\Vec{r}(t\,+\,\delta t)\,=\,\Vec{r}(t)\,+\,\Vec{v}(t)\delta t\,+\,\frac{1}{2}\Vec{a}(t)\delta t^2\,+\,\frac{1}{6}\dot{\Vec{a}}(t)\delta t^3\,+\,o(\delta t^4),
+\label{eq:exp1_verlet}
+\end{equation}
+\begin{equation}
+\Vec{r}(t\,-\,\delta t)\,=\,\Vec{r}(t)\,-\,\Vec{v}(t)\delta t\,+\,\frac{1}{2}\Vec{a}(t)\delta t^2\,-\,\frac{1}{6}\dot{\Vec{a}}(t)\delta t^3\,+\,o(\delta t^4),
+\label{eq:exp2_verlet}
+\end{equation}
+Notiamo che è possibile determinare la posizione a $t\,+\,\delta t$ una volta note la configurazione attuale e quella allo step evolutivo precente, poiché
+\begin{equation}
+\Vec{r}(t\,+\,\delta t) \simeq 2 \Vec{r}(t)\,-\,\Vec{r}(t\,-\,\delta t)\,+\,\Vec{a}(t)\delta t^2\,+\,o(\delta t^4).
+\label{eq:pos_succ}
+\end{equation}
+Il termine $o(\delta t^4)$ rappresenta l'errore di troncamento.
+
+
+: in \cite{Pichardo2005} tutte le particelle test sono lanciate quando la binaria si trova a periastro . La velocità delle particelle test $v_{test}$ è perpendicolare alla congiungente fra i due corpi.
+L'analisi computazionale viene interrotta se la particella si allontana troppo ($\sim\,10\,a$) dal corpo attorno al quale orbita oppure se va ad accrescere la massa della stella. 
+
+
+
+
+I parametri che delimitano la regione d'applicazione del dumping sono:
+\begin{list}{\textbf{-}}{\setlength{\itemsep}{0cm}}
+    \item $D_z$, ossia la variabile \textit{Damping Zone} che determina gli intervalli radiali dove viene applicato lo smorzamento
+    \item $\tau_D$, che è il tempo caratteristico di damping (in unità dell'inverso della frequenza locale)
+\end{list}
+I limiti delle due corone circolari dove vengono applicate le \textit{Wave Killing BC} sono determinati a partire da $D_z$ come
+\begin{equation}
+r_{inf}\,=\,r_{min} \cdot (D_z)^{2/3},
+\label{eq:r_inf_damp}
+\end{equation}
+\begin{equation}
+r_{sup}\,=\,r_{max} \cdot (D_z)^{-2/3}.
+\label{eq:r_sup_damp}
+\end{equation}
+Dalle relazioni precedenti risulta evidente che se $D_z\,<\,1$, allora in nessuna parte della griglia simulativa verranno smorzate le perturbazioni di densità.
+Ad ogni cella facente parte delle regioni 'di smorzamento' è associata una quantità $R_y$, il cui valore viene calcolato come:
+\begin{equation}
+\begin{cases}
+R_y\,=\,(r_{cella}-r_{sup})/(r_{max}-r_{sup}) \qquad r_{cella}\,>\,r_{sup}\\
+R_y\,=\,(r_{inf}-r_{cella})/(r_{inf}-r_{min}) \qquad r_{cella}\,<\,r_{inf}\
+\end{cases}
+\label{eq:rampy_damp}
+\end{equation}
+dove $r_{cella}$ è la posizione radiale media della cella presa in considerazione. 

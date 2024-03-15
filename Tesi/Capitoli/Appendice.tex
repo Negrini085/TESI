@@ -1,0 +1,703 @@
+\appendix
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\large}
+\titlespacing{\chapter}{0pt}{-15pt}{10pt}
+\chapter{Parametri per la determinazione del raggio di troncamento} \label{appendiceA}
+Nella seguente tabella sono riportati i valori di $a$ e $b$ ottenuti come risultato dei fit sui valori numerici ottenuti da Artymowicz e Lubow, 1994.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+\hline
+\rowcolor{yellow}
+Reynolds & \multicolumn{2}{|c|}{Circum-primario} & \multicolumn{2}{|c|}{Circum-secondario} \\
+\hline
+R & $a$ & $b$ & $a$ & $b$ \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.1$} \\
+\hline
+$10^4$ & -0.66 & 0.84 & -0.81 & 0.98 \\
+\hline
+$10^5$ & -0.75 & 0.68 & -0.81 & 0.80 \\
+\hline
+$10^6$ & -0.78 & 0.56 & -0.83 & 0.69 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.2$} \\
+\hline
+$10^4$ & -0.72 & 0.88 & -0.81 & 0.99 \\
+\hline
+$10^5$ & -0.78 & 0.72 & -0.82 & 0.82 \\
+\hline
+$10^6$ & -0.80 & 0.60 & -0.83 & 0.70 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.3$} \\
+\hline
+$10^4$ & -0.76 & 0.92 & -0.79 & 0.97 \\
+\hline
+$10^5$ & -0.80 & 0.75 & -0.82 & 0.81 \\
+\hline
+$10^6$ & -0.81 & 0.63 & -0.83 & 0.69 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.4$} \\
+\hline
+$10^4$ & -0.77 & 0.95 & -0.80 & 0.98 \\
+\hline
+$10^5$ & -0.81 & 0.78 & -0.82 & 0.80 \\
+\hline
+$10^6$ & -0.82 & 0.66 & -0.83 & 0.68 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.5$} \\
+\hline
+$10^4$ & -0.78 & 0.94 & -0.79 & 0.95 \\
+\hline
+$10^5$ & -0.81 & 0.78 & -0.81 & 0.78 \\
+\hline
+$10^6$ & -0.82 & 0.66 & -0.82 & 0.66 \\
+\hline
+\end{tabular}
+\caption{ Parametri che garantiscono i migliori fit con i risultati di Artymowicz e Lubow. I valori hanno una dipendenza sulla viscosità, indicata in termini di numero di Reynols $R$ \parencite{ManaraTronc2019}. }
+\label{tab:para_fit}
+\end{center}
+\end{table}
+
+
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\large}
+\titlespacing{\chapter}{0pt}{-15pt}{10pt}
+\chapter{Risultati sul troncamento} \label{appendiceB}
+
+Nelle seguenti tabelle sono riportate le dimensioni ottenute mediante simulazioni dell'evoluzione dei dischi da \textcite{ArtymowiczLubow1994} e \textcite{Pichardo2005}.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|C{2cm}|C{2cm}|C{3cm}|C{3cm}|}
+\hline
+\rowcolor{yellow}
+$\mu$ & $e$ & Primario & Secondario \\
+\hline
+0.3 & 0.0 & $0.38 \pm 0.03$ & $0.24 \pm 0.02$ \\
+\hline
+0.3 & 0.3 & $0.28 \pm 0.03$ & $0.18 \pm 0.02$ \\
+\hline
+0.1 & 0.0 & $0.47 \pm 0.04$ & $0.17 \pm 0.03$ \\
+\hline
+0.1 & 0.3 & $0.36 \pm 0.03$ & $0.14 \pm 0.02$ \\
+\hline
+\end{tabular}
+\caption{Dimensioni dei dischi d'accrescimento circumstellari ottenute da \textcite{ArtymowiczLubow1994}. La tecnica numerica utilizzata per risolvere le equazioni idrodinamiche è lagrangiana (SPH). I valori di $R$ con cui sono state effettuate le simulazioni sono tali per cui $\log{R} \sim 4$}
+\label{tab:dim_art}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+\hline
+\rowcolor{yellow}
+$\mu/e$ & 0.0 & 0.2 & 0.4 & 0.6 & 0.8 \\
+\hline
+\cellcolor{yellow} 0.1 & 0.125 & 0.100 & 0.079 & 0.049 & 0.019 \\
+\hline
+\cellcolor{yellow} 0.2 & 0.162 & 0.130 & 0.098 & 0.048 & 0.029 \\
+\hline
+\cellcolor{yellow} 0.3 & 0.195 & 0.165 & 0.097 & 0.067 & 0.028 \\
+\hline
+\cellcolor{yellow} 0.4 & 0.228 & 0.195 & 0.125 & 0.083 & 0.033 \\
+\hline
+\cellcolor{yellow} 0.5 & 0.257 & 0.213 & 0.147 & 0.097 & 0.037 \\
+\hline
+\cellcolor{yellow} 0.6 & 0.317 & 0.228 & 0.153 & 0.093 & 0.047 \\
+\hline
+\cellcolor{yellow} 0.7 & 0.350 & 0.225 & 0.171 & 0.109 & 0.037 \\
+\hline
+\cellcolor{yellow} 0.8 & 0.387 & 0.260 & 0.187 & 0.126 & 0.049 \\
+\hline
+\cellcolor{yellow} 0.9 & 0.426 & 0.297 & 0.231 & 0.141 & 0.064 \\
+\hline
+\end{tabular}
+\caption{Dimensioni medie del disco attorno alla stella di massa pari a $\mu \cdot M$ in unità di semiasse maggiore della binaria $a$ (il disco è circum-secondario se $\mu < 0.5$, altrimenti è il disco circum-primario). Tutti i raggi sono valutati al periastro del sistema binario \parencite{Pichardo2005}.}
+\label{tab:dim_pich}
+\end{center}
+\end{table}
+
+
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\large}
+\titlespacing{\chapter}{0pt}{-15pt}{10pt}
+\chapter{Dimensioni della griglia} \label{appendiceC}
+
+Nelle prossima tabella riportiamo le dimensioni in unità di $a$ delle griglie utilizzate per le simulazioni dei dischi circumstellari.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+\hline
+\rowcolor{yellow}
+$q$ & \multicolumn{2}{|c|}{Circum-primario} & \multicolumn{2}{|c|}{Circum-secondario} \\
+\hline
+Valore & $r_{min}/a$ & $r_{max}/a$ & $r_{min}/a$ & $r_{max}/a$ \\
+\hline
+\multicolumn{5}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.1 & 0.048 & 0.841 & 0.033 & 0.292\\
+\hline
+0.33 & 0.040 & 0.696 & 0.033 & 0.333\\
+\hline
+0.5 & 0.035 & 0.617 & 0.033 & 0.333\\
+\hline
+1 & 0.026 & 0.529 & 0.026 & 0.529\\
+\hline
+\multicolumn{5}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.1 & 0.048 & 0.721 & 0.025 & 0.250\\
+\hline
+0.33 & 0.040 & 0.497 & 0.033 & 0.250\\
+\hline
+0.5 & 0.035 & 0.441 & 0.033 & 0.292 \\
+\hline
+1 & 0.026 & 0.330 & 0.026 & 0.330 \\
+\hline
+\multicolumn{5}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.1 & 0.048 & 0.601 & 0.017 & 0.167\\
+\hline
+0.33 & 0.035 & 0.398 & 0.033 & 0.208\\
+\hline
+0.5 & 0.035 & 0.353 & 0.033 & 0.250\\
+\hline
+1 & 0.026 & 0.264 & 0.026 & 0.264 \\
+\hline
+\end{tabular}
+\caption{Dimensioni delle griglie utilizzate per le simulazioni. Il caso riportato è quello di $\alpha\,=\,10^{-3}$. Per il caso di $\alpha\,=\,10^{-3}$ l'unica differenza è che $r_{max}$ per il circumsecondario con q = 0.5, e = 0.0 ha valore: $0.417\,a$. Il caso con $\alpha\,=\,10^{-4}$ è uguale a quello mostrato in tabella.}
+\label{tab:dim_gr}
+\end{center}
+\end{table}
+
+
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\large}
+\titlespacing{\chapter}{0pt}{-15pt}{10pt}
+\chapter{Dimensioni dei dischi} \label{appendiceD}
+
+{\large\textbf{Raggi di troncamento}}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Raggi di troncamento $\alpha\,=\,1 \cdot 10^{-2}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & $0.525\,a$ & $0.166\,a$ \\
+\hline
+0.33 & $0.425\,a$ & $0.240\,a$ \\
+\hline
+0.50 & $0.391\,a$ & $0.269\,a$ \\
+\hline
+1.00 & $0.329\,a$ & $0.329\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & $0.407\,a$ & $0.124\,a$ \\
+\hline
+0.33 & $0.321\,a$ & $0.190\,a$ \\
+\hline
+0.50 & $0.282\,a$ & $0.211\,a$ \\
+\hline
+1.00 & $0.250\,a$ & $0.250\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & $0.259\,a$ & $0.073\,a$ \\
+\hline
+0.33 & $0.190\,a$ & $0.117\,a$ \\
+\hline
+0.50 & $0.172\,a$ & $0.131\,a$ \\
+\hline
+1.00 & $0.147\,a$ & $0.147\,a$ \\
+\hline
+\end{tabular}
+\caption{Dimensioni radiali dei dischi con $\alpha\,=\,1\cdot 10^{-2}$}
+\label{tab:dim_tr2}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Raggi di troncamento $\alpha\,=\,1 \cdot 10^{-3}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & $0.512\,a$ & $0.152\,a$ \\
+\hline
+0.33 & $0.407\,a$ & $0.222\,a$ \\
+\hline
+0.50 & $0.371\,a$ & $0.251\,a$ \\
+\hline
+1.00 & $0.311\,a$ & $0.311\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & $0.388\,a$ & $0.112\,a$ \\
+\hline
+0.33 & $0.304\,a$ & $0.171\,a$ \\
+\hline
+0.50 & $0.272\,a$ & $0.192\,a$ \\
+\hline
+1.00 & $0.231\,a$ & $0.231\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & $0.234\,a$ & $0.066\,a$ \\
+\hline
+0.33 & $0.180\,a$ & $0.104\,a$ \\
+\hline
+0.50 & $0.160\,a$ & $0.116\,a$ \\
+\hline
+1.00 & $0.135\,a$ & $0.135\,a$ \\
+\hline
+\end{tabular}
+\caption{Dimensioni radiali dei dischi con $\alpha\,=\,1\cdot 10^{-3}$}
+\label{tab:dim_tr4}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Raggi di troncamento $\alpha\,=\,1 \cdot 10^{-4}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & $0.501\,a$ & $0.147\,a$ \\
+\hline
+0.33 & $0.394\,a$ & $0.212\,a$ \\
+\hline
+0.50 & $0.357\,a$ & $0.239\,a$ \\
+\hline
+1.00 & $0.300\,a$ & $0.300\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & $0.374\,a$ & $0.105\,a$ \\
+\hline
+0.33 & $0.291\,a$ & $0.160\,a$ \\
+\hline
+0.50 & $0.262\,a$ & $0.179\,a$ \\
+\hline
+1.00 & $0.222\,a$ & $0.222\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & $0.227\,a$ & $0.060\,a$ \\
+\hline
+0.33 & $0.175\,a$ & $0.094\,a$ \\
+\hline
+0.50 & $0.155\,a$ & $0.105\,a$ \\
+\hline
+1.00 & $0.130\,a$ & $0.130\,a$ \\
+\hline
+\end{tabular}
+\caption{Dimensioni radiali dei dischi con $\alpha\,=\,1\cdot 10^{-4}$}
+\label{tab:dim_tr4}
+\end{table}
+
+\newpage
+{\large\textbf{Semiassi di troncamento}}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Semiassi di troncamento $\alpha\,=\,1 \cdot 10^{-2}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & $0.481\,a$ & $0.150\,a$ \\
+\hline
+0.33 & $0.387\,a$ & $0.218\,a$ \\
+\hline
+0.50 & $0.354\,a$ & $0.245\,a$ \\
+\hline
+1.00 & $0.298\,a$ & $0.298\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & $0.384\,a$ & $0.119\,a$ \\
+\hline
+0.33 & $0.304\,a$ & $0.177\,a$ \\
+\hline
+0.50 & $0.269\,a$ & $0.198\,a$ \\
+\hline
+1.00 & $0.239\,a$ & $0.239\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & $0.237\,a$ & $0.071\,a$ \\
+\hline
+0.33 & $0.184\,a$ & $0.104\,a$ \\
+\hline
+0.50 & $0.163\,a$ & $0.121\,a$ \\
+\hline
+1.00 & $0.142\,a$ & $0.142\,a$ \\
+\hline
+\end{tabular}
+\caption{Semiassi maggiori dei dischi con $\alpha\,=\,1\cdot 10^{-2}$}
+\label{tab:dim_sax2}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Semiassi di troncamento $\alpha\,=\,1 \cdot 10^{-3}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & $0.452\,a$ & $0.131\,a$ \\
+\hline
+0.33 & $0.354\,a$ & $0.194\,a$ \\
+\hline
+0.50 & $0.321\,a$ & $0.220\,a$ \\
+\hline
+1.00 & $0.267\,a$ & $0.267\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & $0.340\,a$ & $0.102\,a$ \\
+\hline
+0.33 & $0.271\,a$ & $0.152\,a$ \\
+\hline
+0.50 & $0.245\,a$ & $0.171\,a$ \\
+\hline
+1.00 & $0.207\,a$ & $0.207\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & $0.201\,a$ & $0.061\,a$ \\
+\hline
+0.33 & $0.159\,a$ & $0.091\,a$ \\
+\hline
+0.50 & $0.144\,a$ & $0.103\,a$ \\
+\hline
+1.00 & $0.122\,a$ & $0.122\,a$ \\
+\hline
+\end{tabular}
+\caption{Semiassi maggiori dei dischi con $\alpha\,=\,1\cdot 10^{-3}$}
+\label{tab:dim_sax3}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Semiassi di troncamento $\alpha\,=\,1 \cdot 10^{-4}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & $0.443\,a$ & $0.127\,a$ \\
+\hline
+0.33 & $0.341\,a$ & $0.185\,a$ \\
+\hline
+0.50 & $0.307\,a$ & $0.209\,a$ \\
+\hline
+1.00 & $0.259\,a$ & $0.259\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & $0.324\,a$ & $0.095\,a$ \\
+\hline
+0.33 & $0.259\,a$ & $0.141\,a$ \\
+\hline
+0.50 & $0.234\,a$ & $0.159\,a$ \\
+\hline
+1.00 & $0.198\,a$ & $0.198\,a$ \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & $0.193\,a$ & $0.056\,a$ \\
+\hline
+0.33 & $0.153\,a$ & $0.083\,a$ \\
+\hline
+0.50 & $0.138\,a$ & $0.094\,a$ \\
+\hline
+1.00 & $0.117\,a$ & $0.117\,a$ \\
+\hline
+\end{tabular}
+\caption{Semiassi maggiori dei dischi con $\alpha\,=\,1\cdot 10^{-4}$}
+\label{tab:dim_sax4}
+\end{table}
+
+
+
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\large}
+\titlespacing{\chapter}{0pt}{-15pt}{10pt}
+\chapter{Eccentricità dei dischi} \label{appendiceE}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Eccentricità dei dischi $\alpha\,=\,1 \cdot 10^{-2}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & 0.172 & 0.416\\
+\hline
+0.33 & 0.225 & 0.279\\
+\hline
+0.50 & 0.243 & 0.297\\
+\hline
+1.00 & 0.277 & 0.277\\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & 0.173 & 0.218\\
+\hline
+0.33 & 0.158 & 0.150\\
+\hline
+0.50 & 0.163 & 0.165\\
+\hline
+1.00 & 0.138 & 0.138\\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & 0.174 & 0.088 \\
+\hline
+0.33 & 0.156 & 0.288 \\
+\hline
+0.50 & 0.124 & 0.291 \\
+\hline
+1.00 & 0.159 & 0.159 \\
+\hline
+\end{tabular}
+\caption{Eccentricità dei dischi con $\alpha\,=\,1\cdot 10^{-2}$}
+\label{tab:ecc2}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Eccentricità dei dischi $\alpha\,=\,1 \cdot 10^{-3}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & 0.187 & 0.386 \\
+\hline
+0.33 & 0.251 & 0.311 \\
+\hline
+0.50 & 0.266 & 0.285 \\
+\hline
+1.00 & 0.311 & 0.311 \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & 0.192 & 0.185 \\
+\hline
+0.33 & 0.176 & 0.192 \\
+\hline
+0.50 & 0.156 & 0.213 \\
+\hline
+1.00 & 0.184 & 0.184 \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & 0.124 & 0.077 \\
+\hline
+0.33 & 0.145 & 0.224 \\
+\hline
+0.50 & 0.126 & 0.222 \\
+\hline
+1.00 & 0.171 & 0.171 \\
+\hline
+\end{tabular}
+\caption{Eccentricità dei dischi con $\alpha\,=\,1\cdot 10^{-3}$}
+\label{tab:dim_sax3}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{2cm}|C{4cm}|C{4cm}|}
+\hline
+\rowcolor{yellow}
+\multicolumn{3}{|c|}{Eccentricità dei dischi $\alpha\,=\,1 \cdot 10^{-4}$} \\
+\hline
+$m_2/m_1$ & Circum-primario & Circum-secondario \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.0$} \\
+\hline
+0.10 & 0.210 & 0.311 \\
+\hline
+0.33 & 0.274 & 0.288 \\
+\hline
+0.50 & 0.318 & 0.263 \\
+\hline
+1.00 & 0.315 & 0.315 \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.3$} \\
+\hline
+0.10 & 0.222 & 0.179 \\
+\hline
+0.33 & 0.204 & 0.282 \\
+\hline
+0.50 & 0.213 & 0.245 \\
+\hline
+1.00 & 0.194 & 0.194 \\
+\hline
+\multicolumn{3}{|c|}{$e\,=\,0.6$} \\
+\hline
+0.10 & 0.140 & 0.071 \\
+\hline
+0.33 & 0.158 & 0.243 \\
+\hline
+0.50 & 0.148 & 0.221 \\
+\hline
+1.00 & 0.179 & 0.179 \\
+\hline
+\end{tabular}
+\caption{Eccentricità dei dischi con $\alpha\,=\,1\cdot 10^{-4}$}
+\label{tab:dim_sax4}
+\end{table}
+
+
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\large}
+\titlespacing{\chapter}{0pt}{-15pt}{10pt}
+\chapter{Parametri per il confronto} \label{appendiceF}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+\hline
+\rowcolor{yellow}
+Reynolds & \multicolumn{2}{|c|}{Circum-primario} & \multicolumn{2}{|c|}{Circum-secondario} \\
+\hline
+R & $a$ & $b$ & $a$ & $b$ \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.1$} \\
+\hline
+$4 \cdot 10^4$ & -0.690 & 0.787 & -0.810 & 0.920 \\
+\hline
+$4 \cdot 10^5$ & -0.760 & 0.640 & -0.867 & 0.763 \\
+\hline
+$10^6$ & -0.780 & 0.560 & -0.830 & 0.690 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.2$} \\
+\hline
+$4 \cdot 10^4$ & -0.740 & 0.827 & -0.813 & 0.933 \\
+\hline
+$4 \cdot 10^5$ & -0.787 & 0.680 & -0.823 & 0.780 \\
+\hline
+$10^6$ & -0.800 & 0.600 & -0.830 & 0.700 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.3$} \\
+\hline
+$4 \cdot 10^4$ & -0.773 & 0.863 & -0.800 & 0.917 \\
+\hline
+$4 \cdot 10^5$ & -0.803 & 0.710 & -0.823 & 0.770 \\
+\hline
+$10^6$ & -0.810 & 0.630 & -0.830 & 0.690 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.4$} \\
+\hline
+$4 \cdot 10^4$ & -0.783 & 0.893 & -0.807 & 0.920 \\
+\hline
+$4 \cdot 10^5$ & -0.813 & 0.740 & -0.823 & 0.760 \\
+\hline
+$10^6$ & -0.820 & 0.660 & -0.830 & 0.680 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.5$} \\
+\hline
+$4 \cdot 10^4$ & -0.790 & 0.887 & -0.797 & 0.893 \\
+\hline
+$4 \cdot 10^5$ & -0.813 & 0.740 & -0.813 & 0.740 \\
+\hline
+$10^6$ & -0.820 & 0.660 & -0.820 & 0.660 \\
+\hline
+\end{tabular}
+\caption{Parametri ottenuti estrapolando su $R$ quelli prodotti da \textcite{ManaraTronc2019}}
+\label{tab:para_conf_estr1}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+\hline
+\rowcolor{yellow}
+Reynolds & \multicolumn{2}{|c|}{Circum-primario} & \multicolumn{2}{|c|}{Circum-secondario} \\
+\hline
+R & $a$ & $b$ & $a$ & $b$ \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.091$} \\
+\hline
+$4 \cdot 10^4$ & -0.685 & 0.783 & -0.809 & 0.919 \\
+\hline
+$4 \cdot 10^5$ & -0.758 & 0.638 & -0.871 & 0.761 \\
+\hline
+$10^6$ & -0.782 & 0.556 & -0.830 & 0.689 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.25$} \\
+\hline
+$4 \cdot 10^4$ & -0.757 & 0.845 & -0.867 & 0.925 \\
+\hline
+$4 \cdot 10^5$ & -0.795 & 0.695 & -0.823 & 0.775 \\
+\hline
+$10^6$ & -0.805 & 0.615 & -0.830 & 0.695 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.33$} \\
+\hline
+$4 \cdot 10^4$ & -0.776 & 0.873 & -0.802 & 0.918 \\
+\hline
+$4 \cdot 10^5$ & -0.806 & 0.719 & -0.823 & 0.767 \\
+\hline
+$10^6$ & -0.813 & 0.640 & -0.820 & 0.687 \\
+\hline
+\multicolumn{5}{|c|}{$\mu\,=\,0.5$} \\
+\hline
+$4 \cdot 10^4$ & -0.790 & 0.887 & -0.797 & 0.893 \\
+\hline
+$4 \cdot 10^5$ & -0.813 & 0.740 & -0.813 & 0.740 \\
+\hline
+$10^6$ & -0.820 & 0.660 & -0.820 & 0.660 \\
+\hline
+\end{tabular}
+\caption{Parametri utilizzati per il calcolo dei raggi di troncamento. Essi sono stati ottenuti estrapolando sul numero di Reynolds e su $\mu$.}
+\label{tab:para_conf_estr2}
+\end{center}
+\end{table}

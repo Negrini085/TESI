@@ -1,0 +1,101 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{caption, subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\pdfminorversion=4
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{etoolbox}
+\usepackage{colortbl}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{float}
+
+
+\newenvironment{acknowledgements}%
+{\section*{Ringraziamenti}\leftskip=1em}%
+{\par\addcontentsline{toc}{chapter}{Ringraziamenti}}
+
+\usepackage[backend=biber, style=authoryear]{biblatex}
+\addbibresource{bibliografia.bib}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\renewcommand*{\nameyeardelim}{\addspace}
+\renewcommand*{\postnotedelim}{\addcolon\space}
+\renewcommand*{\finentrypunct}{)}
+\renewcommand{\chaptername}{Capitolo}
+
+\newcommand{\apj}{\textit{The Astrophysical Journal}}
+\newcommand{\mnras}{\textit{Monthly Notices of the Royal Astronomical Society}}
+\newcommand{\aap}{\textit{Astronomy \& Astrophysics}}
+\newcommand{\nar}{\textit{New Astronomy Reviews}}
+\newcommand{\araa}{\textit{Annual Review of Astronomy and Astrophysics}}
+\newcommand{\apjl}{The Astrophysical Journal Letters}
+
+
+\begin{document}
+
+\input{Capitoli/PrimaPagina}
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+\pagenumbering{roman}
+\input{Capitoli/Abstract}
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+\tableofcontents
+\newpage
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+\pagenumbering{arabic}
+\input{Capitoli/Introduzione}
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+\input{Capitoli/FisicaDischi}
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+\input{Capitoli/SistemiBinari}
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+\input{Capitoli/MetodiNumerici}
+\input{Capitoli/Simulazioni}
+\input{Capitoli/Risultati}
+\input{Capitoli/Conclusioni}
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+\input{Capitoli/Appendice}
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+
+\setlength{\bibitemsep}{\baselineskip}
+\printbibliography[heading = bibintoc, title=Bibliografia]
+\newpage
+\thispagestyle{empty}
+\mbox{} 
+\newpage
+
+\input{Capitoli/Ringraziamenti}
+\end{document}
+
+
